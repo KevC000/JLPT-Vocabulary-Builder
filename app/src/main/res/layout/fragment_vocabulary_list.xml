@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        style="@style/screens"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red_japan_2"
+        android:orientation="vertical"
+        tools:context=".VocabularyListFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/quiz_specifications_text_nonblack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by: " />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_vocab_list_sort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Levels: "
+                style="@style/quiz_specifications_text"
+                />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/quiz_specifications_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N5"
+                android:checked="true"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/quiz_specifications_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N4"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/quiz_specifications_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N3"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/quiz_specifications_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N2"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                style="@style/quiz_specifications_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    tools:listitem="@layout/vocab_item"
+    />
+
+    </LinearLayout>
+
+</layout>

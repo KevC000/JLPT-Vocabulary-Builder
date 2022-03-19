@@ -1,0 +1,1 @@
+class Vocabulary : ArrayList<VocabularyItem>()

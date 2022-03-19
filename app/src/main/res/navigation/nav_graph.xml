@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/quizSelector">
+
+    <fragment
+        android:id="@+id/quizSelector"
+        android:name="com.example.jlptvocabularybuilder.QuizSelectorFragment"
+        android:label="Quiz Selection"
+        tools:layout="@layout/fragment_quiz_selector" >
+        <action
+            android:id="@+id/action_quizSelector_to_quizScreenFragment"
+            app:destination="@id/quizScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizScreenFragment"
+        android:name="com.example.jlptvocabularybuilder.QuizScreenFragment"
+        android:label="Quiz"
+        tools:layout="@layout/fragment_quiz_screen" />
+    <fragment
+        android:id="@+id/vocabularyListFragment"
+        android:name="com.example.jlptvocabularybuilder.VocabularyListFragment"
+        android:label="Vocabulary List"
+        tools:layout="@layout/fragment_vocabulary_list" />
+</navigation>

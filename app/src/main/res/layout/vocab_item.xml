@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="92dp"
+    android:layout_height="92dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/vocab_item_background_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vocab_item_background_border"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vocab_kanji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="家族"
+            style="@style/vocab_item_kanji"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vocab_correct"
+            style="@style/vocab_item_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correct: 1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vocab_incorrect"
+            style="@style/vocab_item_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incorrect: 0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/vocab_percentage"
+            style="@style/vocab_item_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="75%"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

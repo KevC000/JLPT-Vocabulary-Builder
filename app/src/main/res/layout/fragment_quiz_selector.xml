@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.jlptvocabularybuilder.QuizSelectorViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".QuizSelector"
+        style="@style/screens"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/quiz_specifications_text_nonblack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_type_text" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/quiz_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </androidx.appcompat.widget.AppCompatSpinner>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_group_num_questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_num_of_questions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/questions_select"
+                style="@style/quiz_specifications_text_nonblack"
+
+                />
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_10_ques"
+                style="@style/quiz_specifications_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="10"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_20_ques"
+                style="@style/quiz_specifications_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="20"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_30_ques"
+                style="@style/quiz_specifications_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="30"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_40_ques"
+                style="@style/quiz_specifications_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="40"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radio_50_ques"
+                style="@style/quiz_specifications_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="50"/>
+
+        </RadioGroup>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="@string/select_levels_instruction" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_n5"
+                style="@style/level_selection_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/level_background_border"
+                android:gravity="center"
+                android:text="N5"
+
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_n4"
+                style="@style/level_selection_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/level_background_border"
+                android:gravity="center"
+                android:text="N4"
+
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:textSize="32sp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_n3"
+                style="@style/level_selection_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/level_background_border"
+                android:gravity="center"
+                android:text="N3"
+
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_n2"
+                style="@style/level_selection_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/level_background_border"
+                android:gravity="center"
+                android:text="N2"
+
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_n1"
+                style="@style/level_selection_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/level_background_border"
+                android:gravity="center"
+                android:text="N1"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_start"
+                style="@style/level_selection_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/start_background_border"
+                android:gravity="center"
+                android:text="@string/start_button_str"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
